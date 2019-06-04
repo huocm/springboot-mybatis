@@ -1,0 +1,45 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>ReYoPrint免费版</title>
+<STYLE MEDIA="PRINT">    
+	.only_print_view {display:none;}
+</STYLE>
+<STYLE MEDIA="SCREEN">    
+	.only_print_view {display:block;}
+</STYLE>
+<body leftMargin=0 topMargin=0 marginheight="0" marginwidth="0">
+<OBJECT ID="ReYoPrint" CLASSID="CLSID:5C230622-45E5-4e3c-893C-3BFDDC4DB5E4"  codebase="ReYoPrint.cab" height="0" width="0"></OBJECT>
+<script>
+  ReYoPrint.MarginLeft=2;	//设置左边边距
+  ReYoPrint.MarginRight=2;	//设置右边边距
+  ReYoPrint.MarginTop=0;	//设置上边边距
+  ReYoPrint.MarginBottom=2;	//设置下边边距
+  ReYoPrint.CopyCount=1;  	//打印份数
+  ReYoPrint.PageHeader="";	//页眉
+  ReYoPrint.PageFooter="";	//页脚
+  ReYoPrint.IsLandScape=0;	//把页面设置为横向1
+  //ReYoPrint.ContentURL="http://www.interdrp.com/print.html";
+</script>
+<br><br>
+<DIV><FONT color=#0000ff><STRONG>ReYoPrint收费版升级通知</STRONG></FONT></DIV>
+<DIV>
+<DIV><FONT color=#009900><FONT color=#ff0000>2008-09-28</FONT> </FONT><FONT color=#000000>新增打印区域拖拽及鼠标滚轮放大缩小功能．</FONT></DIV>
+<DIV><FONT color=#009900><FONT color=#ff0000>2008-09-26</FONT> </FONT><FONT color=#000000>新增web套打功能：仅在预览时可见，不输出到打印机的套打底图</FONT></DIV></DIV>
+<DIV>
+<DIV><FONT color=#000000></FONT>&nbsp;</DIV>
+<DIV><FONT color=#0000ff><STRONG>ReYoPrint收费版简介</STRONG></FONT></DIV></DIV>
+<DIV>ReYoPrint是一个全面强大的web打印的解决方案。它可以直接在IE浏览器中可视化的设计各种复杂的打印模版， 轻松解决Web套打问题。也可以直接打印用ASP,JSP,PHP,.NET等动态程序生成的HTML页面。</DIV>
+<DIV>&nbsp;</DIV>
+<DIV>ReYoPrint内含一个在vc7.0上开发的ActiveX控件（73k）, 这个控件主要实现对打印参数的控制，ReYoPrint使用户通过JavaScript脚本可以控制分页，页眉页脚，页边距，打印方向，自定义纸张，直接打印，弹出打印对话框再打印，预览，放缩打印，成批打印，套打等功能 <BR></DIV>
+<br><br>
+
+<div class="only_print_view">
+<input type="button" id="btnPrint" value="打印预览" onclick="ReYoPrint.PrintPreview()">
+<input type="button" id="btnPrint" value="打印文件" onclick="ReYoPrint.Print()">
+<input type="button" id="btnPrint" value="直接打印" onclick="ReYoPrint.PrintDirect()">
+</div>
+
+
+
+

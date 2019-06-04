@@ -1,0 +1,183 @@
+<%@ page language="java" contentType="text/html;charset=GBK" pageEncoding="GBK" errorPage="../../Error.jsp"%>
+<%@include file="../../sessionValidate.jsp" %>
+
+
+<%@ taglib prefix="s" uri="/struts-tags" %>
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+<link rel="stylesheet" href="jsp/css/mainstyle.css" type="text/css">
+<title>T_order信息增加页</title>
+     <link rel="stylesheet" href="<s:url value='/css/style.css'/>" type="text/css">
+     <script language="JavaScript" src="<s:url value='/js/global.js'/>" ></script>
+     <script language="JavaScript" src="<s:url value='/jscript/date.js'/>" ></script>
+<style type="text/css">
+<!--
+.STYLE5 {	color: #000000;
+	font-size: 12px;
+}
+-->
+</style>
+</head>
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" scroll=yes>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="2d6094">
+  <tr>
+    <td height="3"></td>
+  </tr>
+  <tr>
+    <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="10" height="25" background="<s:url value='/images/1_09.gif'/>"><img src="<s:url value='/images/1_08.gif'/>" width="8" height="25"></td>
+        <td width="839" valign="bottom"  background="<s:url value='/images/1_09.gif'/>"><span class="daohang">·财务管理&gt;&gt; 报价单管理</span></td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center" valign="middle" bgcolor="#FFFFFF" ><table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td height="229" valign="top" ><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td><table width="100%" height="24" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                              <td width="21" background="<s:url value='/images/1_27.gif'/>"><img src="<s:url value='/images/1_26.gif'/>" width="21" height="24"></td>
+                              <td align="left" background="<s:url value='/images/1_27.gif'/>" class="daohang">报价单信息察看页</td>
+                            </tr>
+                        </table></td>
+                      </tr>
+                      <tr>
+                        <td bgcolor="cbcbcb">
+                          <table width="100%" border="0" cellspacing="1" cellpadding="0" class="STYLE5">					 
+							<tr>
+                              <td width="10%" height="24" align="right" valign="middle" bgcolor="#F2F2F2">报价单编号</td>
+                              <td width="20%" align="left" valign="middle"  bgcolor="#FFFFFF">&nbsp;${t_order.id }&nbsp;</td>
+                              <td width="10%" height="24" align="right" valign="middle" bgcolor="#F2F2F2">报价状态 </td>
+                              <td width="20%" align="left" valign="middle"  bgcolor="#FFFFFF">&nbsp;已审核&nbsp;</td>
+                              <td width="10%" height="24" align="right" valign="middle" bgcolor="#F2F2F2">报价日期</td>
+                              <td width="30%" align="left" valign="middle"  bgcolor="#FFFFFF">&nbsp;${t_order.createtime }&nbsp;</td>                                                            
+                            </tr>
+							<tr>
+                              <td width="10%" height="24" align="right" valign="middle" bgcolor="#F2F2F2">客户名称</td>
+                              <td width="50%" align="left" valign="middle"  bgcolor="#FFFFFF" colspan="3">&nbsp;${t_order.customername }&nbsp;</td>
+                              
+                              <td width="10%" height="24" align="right" valign="middle" bgcolor="#F2F2F2">联系人</td>
+                              <td width="30%" align="left" valign="middle"  bgcolor="#FFFFFF">&nbsp;${t_order.linkman }&nbsp;</td>                                                            
+                            </tr>
+							<tr>
+                              <td width="10%" height="24" align="right" valign="middle" bgcolor="#F2F2F2">体检机构</td>
+                              <td width="20%" align="left" valign="middle"  bgcolor="#FFFFFF">&nbsp;${t_order.companyname }&nbsp;</td>
+                              <td width="10%" height="24" align="right" valign="middle" bgcolor="#F2F2F2">&nbsp;</td>
+                              <td width="15%" align="left" valign="middle"  bgcolor="#FFFFFF">&nbsp;</td>
+                              <td width="15%" height="24" align="right" valign="middle" bgcolor="#F2F2F2">联系方式</td>
+                              <td width="30%" align="left" valign="middle"  bgcolor="#FFFFFF">&nbsp;${t_order.linktel }&nbsp;</td>                                                            
+                            </tr>							
+							<tr>
+                              <td width="10%" height="24" align="right" valign="middle" bgcolor="#F2F2F2">男性总价</td>
+                              <td width="20%" align="left" valign="middle"  bgcolor="#FFFFFF">&nbsp;<fmt:formatNumber value="${t_order.maleprice}" pattern="0.00"/> 	&nbsp;</td>
+                              <td width="10%" height="24" align="right" valign="middle" bgcolor="#F2F2F2">未婚女性总价 </td>
+                              <td width="15%" align="left" valign="middle"  bgcolor="#FFFFFF">&nbsp;<fmt:formatNumber value="${t_order.unmarriedprice}" pattern="0.00"/> 	&nbsp;</td>
+                              <td width="15%" height="24" align="right" valign="middle" bgcolor="#F2F2F2">已婚女性总价</td>
+                              <td width="30%" align="left" valign="middle"  bgcolor="#FFFFFF">&nbsp;<fmt:formatNumber value="${t_order.marriedparice}" pattern="0.00"/> 	&nbsp;</td>                                                            
+                            </tr>		
+                            			
+	                       <tr>
+	                        <td bgcolor="cbcbcb" colspan="6">
+	                          <table width="100%" border="1" cellspacing="0" cellpadding="0" class="STYLE5">
+	                            <tr>
+	                              <td width="" height="24" align="center" valign="middle" bgcolor="#F2F2F2">科目</td>
+	                              <td width="" align=""center"" valign="middle"  bgcolor="#F2F2F2">&nbsp;体检项目&nbsp;</td>
+	                              <td width="" height="24" align=""center"" valign="middle" bgcolor="#F2F2F2">男性 </td>
+	                              <td width="" align=""center"" valign="middle"  bgcolor="#F2F2F2">&nbsp;未婚女&nbsp;</td>
+	                              <td width="" height="24" align=""center"" valign="middle" bgcolor="#F2F2F2">已婚女</td>
+	                              <td width="" align=""center"" valign="middle"  bgcolor="#F2F2F2">&nbsp;临床意义&nbsp;</td>                                                            
+	                            </tr>
+	                        <s:iterator value="t_order.t_order_products_subList"  id="sub">
+	 						   <tr>
+	                              <td  height="24" align="center" valign="middle" bgcolor="FFFFFF">${sub.name }</td>
+	                              <td  height="24" align="center" valign="middle" bgcolor="FFFFFF">${sub.memo }</td>
+	                              <td  height="24" align="center" valign="middle" bgcolor="FFFFFF">	                             
+			                              <s:if test="'${sub.male}'!='1'">
+			                              <input type="checkbox">
+			                              </s:if>
+			                              <s:else>
+			                               <input type="checkbox" checked>
+			                              </s:else>
+			                              ${sub.maleprice }                              
+	                              </td>
+	                              <td  height="24" align="center" valign="middle" bgcolor="FFFFFF">                       
+	                              		  <s:if test="'${sub.unmarried}'!='1'">
+			                              <input type="checkbox">
+			                              </s:if>
+			                              <s:else>
+			                               <input type="checkbox" checked>
+			                              </s:else>
+			                              ${sub.unmarriedprice } 	                              
+	                              </td>
+	                              <td  height="24" align="center" valign="middle" bgcolor="FFFFFF">
+	                              	   <s:if test="'${sub.married}'!='1'">
+			                              <input type="checkbox">
+			                              </s:if>
+			                              <s:else>
+			                               <input type="checkbox" checked>
+			                              </s:else>
+			                              ${sub.marriedprice } 
+	                              </td>	                              
+	                              <td  height="24" align="center" valign="middle" bgcolor="FFFFFF">${sub.memo2 }</td>
+	                              	                                                        
+	                            </tr>
+	                       </s:iterator>     							
+								<tr align="center" >
+	                              <td height="24" bgcolor="#F2F2F2" colspan="6">	
+									
+							      </td>
+							   </tr>
+	                        </table>
+							</td>
+	                      </tr>
+                            			
+                            				
+                        </table>
+						</td>
+                      </tr>
+					  
+					</table>
+                      </td>
+                </tr>
+              </table></td>
+            </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+
+<script  language="javascript">
+function   fprint()
+{  try{
+		   demo.style.display=(demo.style.display == "none")?"block":"none";
+		   window.print();
+		   demo.style.display = "block";
+	  }catch(e){ alert("请注意你的打印机：\n\n.可能打印机还没准备好；\n.可能打印机出现了故障。");}
+   
+		   
+}
+</script>
+
+<div  id=demo style="display:block" align="center">
+<br>
+<!--
+<input  type="button"  name="dy"  value="打印"  onclick="btnPrint(document.windows)"  > &nbsp;&nbsp;
+-->
+<input  type="button"  class="btn"  name="dy"  value="    打印    "  onclick="fprint()"  > &nbsp;&nbsp;
+
+<input type="button" class="btn" value="    返回    " name="B1" onClick="javascript:history.back(-1)">
+
+<!--
+ <input  type="button"  name="gb"  value="关闭"  onclick="window.close()"  >
+ -->
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+body{ background:none; background-color:#fefefe;}
+.nav_menu ul { list-style:none;}
+.nav_menu ul li {float:left;position:relative;width:80px;margin-right:20px;}
+.nav_menu ul li ul {display: none;list-style:none;margin-left:15px;}
+.nav_menu>ul>li:hover>a {color:#ff0000; }
+.nav_menu>ul>li:hover>ul {list-style:none;display:block;position:absolute;width:80px;border:#44ac85 solid 1px;border-top:none;height:auto;background:url(../../images/sub_images/hovbja.png) repeat;padding-bottom:5px;}
+.nav_menu>ul>li:hover>ul>li>a {display:block;color:#32a16e;height:18px;line-height:20x;font-size:12px;width:80px;text-align:center;padding-top:0px;padding-bottom:5px;}
+.nav_menu ul li:hover ul li a:hover {color:#ff0000;}
+
+/* formbox */
+#formbox{padding:20px;border:solid 1px #D1D1D1;margin:0 auto;width:880px;}
+#formbox h3{font-size:16px;height:32px;color:green;font-weight:800;border-bottom:solid 1px #D1D1D1;margin:0 0 20px 0;padding:0 10px;}
+.curpos{height:10px;line-height:10px;width:260px;margin-top: 0px;margin-bottom: 2px;}
+
+.item{padding-top:5px;height:50px;overflow:hidden;line-height:26px;}
+
+.label{width:300px;text-align:right;font-size:15px;color:#555; float:left;}
+.red{color:#ff0000;font-family:"ËÎÌו";font-weight:normal;}
+
+.inputBox{ float:left;}
+.text{width:240px;height:16px;padding:4px 3px;border:1px solid #bbb;font-size:14px;font-family:arial,"ËÎÌו";}
+
+.blank{width:16px;height:16px;margin:0px; float:left;}
+.blank2{ margin-left:16px;}
+
+.text-1{width:100px;}
+
+.green_button{background:url(../../images/sub_images/green_button.png);border:none;cursor:pointer;height:36px;line-height:36px;overflow:hidden;display:inline-block;text-align:center;font-size:14px;font-weight:800;color:#fff;background-position:0 0;width:139px;}

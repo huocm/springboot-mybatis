@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="GBK"?>
+<web-app version="2.4" 
+	xmlns="http://java.sun.com/xml/ns/j2ee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+    
+    <context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+			/WEB-INF/classes/applicationContext.xml,
+			/WEB-INF/classes/dataAccessContext-local.xml
+		</param-value>		
+	</context-param>
+
+ <filter>
+  <filter-name>encodingFilter</filter-name>
+  <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+  <init-param>
+   <param-name>encoding</param-name>
+   <param-value>GBK</param-value>
+  </init-param>
+ </filter>
+ 
+<mime-mapping>
+	<extension>css</extension>
+	<mime-type>text/css</mime-type>
+</mime-mapping>
+
+ <filter-mapping>
+  <filter-name>encodingFilter</filter-name>
+  <url-pattern>/*</url-pattern>
+ </filter-mapping>
+ 
+    <servlet>
+        <servlet-name>fileDownloadServlet</servlet-name>
+        <servlet-class>com.common.servlet.FileDownload</servlet-class>
+         <init-param>
+            <param-name>fileRoot </param-name>
+            <param-value>d:/JCUploadFiles/</param-value>
+        </init-param>
+        <init-param>
+            <param-name>contentType</param-name>
+            <param-value>application/octet-stream/pdf</param-value>
+        </init-param>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>utf-8</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>fileDownloadServlet</servlet-name>
+        <url-pattern>/fileDownload</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+	    <description>This is the description of my J2EE component</description>
+	    <display-name>This is the display name of my J2EE component</display-name>
+	    <servlet-name>Image</servlet-name>
+	    <servlet-class>com.common.servlet.Image</servlet-class>
+	 </servlet>
+	
+	 <servlet-mapping>
+	    <servlet-name>Image</servlet-name>
+	    <url-pattern>/Image</url-pattern>
+	 </servlet-mapping>
+   
+    <servlet>
+	    <description>This is the description of my J2EE component</description>
+	    <display-name>This is the display name of my J2EE component</display-name>
+	    <servlet-name>NewsImage</servlet-name>
+	    <servlet-class>com.common.servlet.NewsImage</servlet-class>
+	 </servlet>
+	
+	 <servlet-mapping>
+	    <servlet-name>NewsImage</servlet-name>
+	    <url-pattern>/NewsImage</url-pattern>
+	 </servlet-mapping>	
+	<filter>
+		<filter-name>struts2</filter-name>
+		<filter-class>org.apache.struts2.dispatcher.FilterDispatcher</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>struts2</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+	<listener>
+	  <listener-class>com.common.servlet.CounterListener</listener-class>
+	</listener>
+	  
+	<listener>
+	  <listener-class>com.common.servlet.AttributeListener</listener-class>
+	</listener>
+		
+<!--
+	<listener>
+		<listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
+    </listener>
+ -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+<!--
+    <error-page>
+      <error-code>500</error-code>
+      <exception-type>java.lang.NullPointerException
+      </exception-type>
+      <location>/Error.jsp</location>
+    </error-page>
+
+    <error-page>
+      <error-code>404</error-code>
+      <location>/Error.jsp</location>
+    </error-page>
+   
+    <error-page>  
+	  <error-code>500</error-code>  
+	  <location>/Error.jsp</location> 
+	</error-page>
+
+	<welcome-file-list>
+		<welcome-file>/struts2signon.jsp</welcome-file>
+	</welcome-file-list>
+ 
+ 	<welcome-file-list>
+		<welcome-file>/login.jsp</welcome-file>
+	</welcome-file-list>
+ -->
+ 
+ 	<welcome-file-list>
+		<welcome-file>/index.jsp</welcome-file>
+	</welcome-file-list> 
+ 	
+    <jsp-config>
+		<taglib>
+			<taglib-uri>http://java.sun.com/jstl/core</taglib-uri>
+			<taglib-location>c.tld</taglib-location>
+		</taglib>
+		<taglib>
+			<taglib-uri>http://java.sun.com/jstl/fmt</taglib-uri>
+			<taglib-location>fmt.tld</taglib-location>
+		</taglib> 
+		<taglib>
+			<taglib-uri>http://java.sun.com/jstl/fn</taglib-uri>
+			<taglib-location>fn.tld</taglib-location>
+		</taglib>
+	</jsp-config>
+
+</web-app>
+
+	
+	

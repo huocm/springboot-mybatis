@@ -1,0 +1,324 @@
+<%@ page language="java" contentType="text/html;charset=GBK" pageEncoding="GBK" errorPage="../../Error.jsp"%>
+<%@include file="../../taglibs.jsp" %>
+<%@include file="../../sessionValidate.jsp" %>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+<title>T_member信息列表页</title>
+     <link rel="stylesheet" href="<s:url value='/css/style.css'/>" type="text/css">
+     <script language="JavaScript" src="<s:url value='/js/global.js'/>" ></script>
+     <script language="JavaScript" src="<s:url value='/jscript/date.js'/>" ></script>
+     <script language="JavaScript" src="<%= basePath %>/js/myAjax.js" ></script>
+     <script language="JavaScript" src="<s:url value='/js/sorttable.js'/>"></script>
+</head>
+<script type="text/javascript">
+//加载人员和机构
+function load(){
+	loadCustomer();
+	//loadBranch(); 放到loadUsers()执行完后后，再调用，否则无法显示数据。
+}	
+
+
+//请求函数
+function loadCompany(){
+    //URL未尾要加个随机数，以免请求不能再次提交
+    var url = '<%=basePath%>T_companyActionFindAll.action?time='+Math.random();
+    //alert(url);
+    //要提交到服务器的数据
+    var content =""; // "userName=" + name;
+    //调用异常请求提交的函数
+    sendRequest("POST",url,content,"TEXT",loadCompanyCallBack );
+}
+        
+//回调函数
+function loadCompanyCallBack(){
+    // 请求已完成
+    if( http_request.readyState == 4) {
+        // 信息已经成功返回，开始处理信息
+        if(http_request.status == 200) {                
+            var companyid = document.getElementById("companyid");
+			var results = http_request.responseXML.getElementsByTagName("company");
+			var option = null;
+			var text = null;
+			//alert("results="+results+",length="+results.length); 
+			for(var i = 0; i < results.length; i++) {
+			    option = document.createElement("option");
+			    option.setAttribute("value", results[i].getAttribute("id"));
+			    option.appendChild(document.createTextNode(results[i].firstChild.nodeValue));
+			    companyid.appendChild(option);  
+			    //alert(option);         
+            }
+            //alert("完毕!");
+        } else { //页面不正常
+            alert('您所请求的页面有异常');
+        }
+    }
+}
+
+function setCompanyHiddenValue(){
+	//获取select　option  对象
+	var ss = document.form1.companyid;
+	var hiddenValue = ss.options[ss.selectedIndex].text;
+	//alert("name="+hiddenValue);
+	//获取option的text
+    document.form1.company.value = hiddenValue;
+
+}
+	
+	//请求函数
+function loadCustomer(){
+    //URL未尾要加个随机数，以免请求不能再次提交
+    var url = '<%=basePath%>T_customerActionFindAllAjax.action?time='+Math.random();
+    //alert(url);
+    //要提交到服务器的数据
+    var content =""; // "userName=" + name;
+    //调用异常请求提交的函数
+    sendRequest("POST",url,content,"TEXT",loadCustomerCallBack );
+}
+        
+//回调函数
+function loadCustomerCallBack(){
+    // 请求已完成
+    if( http_request.readyState == 4) {
+        // 信息已经成功返回，开始处理信息
+        if(http_request.status == 200) {                
+            var mubiao = document.getElementById("customerid");
+			var results = http_request.responseXML.getElementsByTagName("result");
+			var option = null;
+			var text = null;
+			//alert("results="+results+",length="+results.length); 
+			for(var i = 0; i < results.length; i++) {
+			    option = document.createElement("option");
+			    option.setAttribute("value", results[i].getAttribute("id"));
+			    option.appendChild(document.createTextNode(results[i].firstChild.nodeValue));
+			    mubiao.appendChild(option);  
+			    //alert(option);         
+            }
+            //alert("完毕!");
+        } else { //页面不正常
+            alert('您所请求的页面有异常');
+        }
+        //同时加载会有问题
+        //loadCompany();
+    }
+}
+
+    //提交
+	function check(){	
+
+	    var customername = document.getElementById('customername').value;		
+		if(customername==null || customername ==''){
+		    alert("客户不能为空！");
+			return false;
+		}	
+		var linkman = document.getElementById('linkman').value;		
+		if(linkman==null || linkman ==''){
+		    alert("联系人不能为空！");
+			return false;
+		}
+		//if(isNaN(num) ){
+		//    alert("人员数量必须为数字！");
+		//	return false;
+		//}		
+	    
+	    //var linktel = document.getElementById('linktel').value;		
+        //if(linktel==null || linktel ==''){
+		//    alert("联系人电话不能为空！");
+		//	return false;
+		//}
+		
+		form1.action = "<%= basePath %>T_orderActionSaveOrderDYB.action";
+		form1.submit();
+		
+	}
+
+function setCustomerNameHiddenValue(){
+	//获取select　option  对象
+	var ss = document.form1.customerid;
+	var hiddenValue = ss.options[ss.selectedIndex].text;
+	//alert("hiddenValue="+hiddenValue);
+	//获取option的text
+    document.form1.customername.value = hiddenValue;
+}
+
+function setCompanyNameHiddenValue(){
+	//获取select　option  对象
+	var ss = document.form1.companyid;
+	var hiddenValue = ss.options[ss.selectedIndex].text;
+	//alert("name="+hiddenValue);
+	//获取option的text
+    document.form1.companyname.value = hiddenValue;
+    
+    //loadProductsSub div
+    loadProductsSub(document.form1.companyid.value);
+
+}
+
+	//请求函数
+function loadProductsSub(companyid){
+    //URL未尾要加个随机数，以免请求不能再次提交
+    var url = '<%=basePath%>T_productsSubAllAjax.action?companyid='+companyid+'&time='+Math.random();
+    //alert(url);
+    //要提交到服务器的数据
+    var content =""; // "userName=" + name;
+    //调用异常请求提交的函数
+    sendRequest("POST",url,content,"TEXT",loadProductsSubCallBack );
+}
+        
+//回调函数
+function loadProductsSubCallBack(){
+    // 请求已完成
+    if( http_request.readyState == 4) {
+        // 信息已经成功返回，开始处理信息
+        if(http_request.status == 200) {                
+            var mubiao = document.getElementById("products_sub");
+			//var results = http_request.responseXML.getElementsByTagName("result");
+            if(mubiao != undefined){
+                 //返回的是文本格式信息
+                 mubiao.innerHTML = http_request.responseText;  
+                 //alert(http_request.responseText)                 
+            }
+			
+        } else { //页面不正常
+            alert('您所请求的页面有异常');
+        }
+        //同时加载会有问题
+        
+    }
+}
+
+</script>
+<body onload="load()" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" scroll=yes>
+<s:form  name="form1" theme="simple">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="2d6094">
+  <tr>
+    <td height="3"></td>
+  </tr>
+  <tr>
+    <td valign="top">
+     
+     <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="10" height="25" background="<s:url value='/images/1_09.gif'/>"><img src="<s:url value='/images/1_08.gif'/>" width="8" height="25"></td>
+        <td width="839" valign="bottom"  background="<s:url value='/images/1_09.gif'/>" ><span class="daohang">·业务管理&gt;&gt; 报价单管理</span></td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center" valign="middle" bgcolor="#FFFFFF" >
+          
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td>
+              
+               <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td height="229" valign="top" >
+                    
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                     <tr>
+                        <td><table width="100%" height="24" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                              <td width="21" background="<s:url value='/images/1_27.gif'/>" ><img src="<s:url value='/images/1_26.gif'/>" width="21" height="24"></td>
+                              <td align="left" background="<s:url value='/images/1_27.gif'/>" class="daohang" >报价单信息增加页</td>
+                            </tr>
+                        </table></td>
+                      </tr>
+                      <tr>
+                        <td bgcolor="cbcbcb">
+                                                
+                          <table width="100%" border="0" cellspacing="0" cellpadding="0" class="STYLE5">					 
+														        
+					        <tr>
+							  <td width="40%" height="24" align="right" valign="middle" bgcolor="#F2F2F2">客户名称:</td>
+                              <td width="60%" align="left" valign="middle"  bgcolor="#FFFFFF">&nbsp;
+					            	<select  name="t_order.customerid"  id="customerid" onChange="setCustomerNameHiddenValue()">
+					            		<option value="">------</option>
+					            	</select><font color="#FF0000">*</font>	
+					            	<br><s:hidden  name="t_order.customername"  id="customername"/>	
+					            		<s:hidden  name="t_order.checkstatus"   value="报价单录入"/>		    
+							  </td>
+                              <td width="40%" height="24" align="right" valign="middle" bgcolor="#F2F2F2">&nbsp;</td>                                                           
+                            </tr>	
+							<tr>
+							  <td width="40%" height="24" align="right" valign="middle" bgcolor="#F2F2F2">联系人:</td>
+                              <td width="60%" align="left" valign="middle"  bgcolor="#FFFFFF">&nbsp;
+					            	<s:textfield  name="t_order.linkman"   id="linkman" maxlength="5"/><font color="#FF0000">*</font>							    
+							  </td>
+                              <td width="40%" height="24" align="right" valign="middle" bgcolor="#F2F2F2">&nbsp;</td>                                                           
+                            </tr>
+							<tr>
+							  <td width="40%" height="24" align="right" valign="middle" bgcolor="#F2F2F2">联系电话:</td>
+                              <td width="60%" align="left" valign="middle"  bgcolor="#FFFFFF">&nbsp;
+					            	<s:textfield  name="t_order.linktel"   id="linktel" maxlength="11" /><font color="#FF0000">*</font>							    
+							  </td>
+                              <td width="40%" height="24" align="right" valign="middle" bgcolor="#F2F2F2">&nbsp;</td>                                                           
+                            </tr>
+                            <!--  
+                            <tr>
+							  <td width="40%" height="24" align="right" valign="middle" bgcolor="#F2F2F2">体检机构:</td>
+                              <td width="60%" align="left" valign="middle"  bgcolor="#FFFFFF">&nbsp;
+					            	<select  name="t_order.companyid"  id="companyid"  onChange="setCompanyNameHiddenValue()">
+					            		<option value="">------</option>
+					            	</select><font color="#FF0000">*</font>	
+					            	
+					            	<s:hidden  id="companyname" name="t_order.companyname" value=""/>      							    
+							  </td>
+                              <td width="40%" height="24" align="right" valign="middle" bgcolor="#F2F2F2">&nbsp;</td>                                                           
+                            </tr>
+                            -->
+ 							<tr>
+							  <td width="40%" height="24" align="right" valign="middle" bgcolor="#F2F2F2">创建人:</td>
+                              <td width="60%" align="left" valign="middle"  bgcolor="#FFFFFF">&nbsp;${userName}
+					             <s:hidden  name="t_order.creater"  value="${userName}" />						    
+							  </td>
+                              <td width="40%" height="24" align="right" valign="middle" bgcolor="#F2F2F2">&nbsp;</td>                                                           
+                            </tr>
+	                         
+	                        <tr>
+		                        <td valign="top" bgcolor="cbcbcb"  colspan="8">
+		                          <table id="table0" width="100%" border="0" cellspacing="0" cellpadding="0">
+		                           <tr>
+		                            <td colspan="8">
+		                             <div id="products_sub"></div>			    
+							        </td>
+							        </tr>					      							   
+							    </table></td>
+		                    </tr>
+	                         	                           
+							<tr align="center">
+                              <td height="24" bgcolor="#F2F2F2" colspan="4">                                	
+	                      		<input type="button" class="btn" value="    下一步    " name="B1" onclick="check()">
+								<input type="reset"  class="btn" value="    清除    " name="B2">
+								<input type="button" class="btn" value="    返回    " name="B1" onClick="javascript:history.back(-1)">
+						      </td>
+						   </tr>					   
+                         </table>
+                        
+						</td>
+                      </tr>					  
+					</table>
+					
+                  </td>
+                </tr>
+              </table>
+             
+             </td>
+           </tr>
+        </table>
+       
+       </td>
+      </tr>
+    </table>
+   
+   </td>
+  </tr>
+</table>
+
+</s:form>
+</body>
+</html>
+	

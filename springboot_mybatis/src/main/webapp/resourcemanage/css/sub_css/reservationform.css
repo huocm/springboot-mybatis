@@ -1,0 +1,85 @@
+/* CSS Document */
+
+.reservationForm{
+    padding-left:25px;
+	margin-top:25px;
+	font-size:14px;
+}
+.reservationForm p{
+    margin-top:10px;
+}
+.reservationForm p span{
+    font-size:14px;
+	color:#FF0000;
+	margin-left:10px;
+}
+.reservationForm li{
+    list-style:none;
+    float:left;
+	text-align:center;
+	margin-top:15px;
+}
+
+.labeltext{
+    width:130px;
+	display:inline-block;
+	text-align:right;
+	font-family:"微软雅黑";
+}
+.labeltext2{
+    width:200px;
+	display:inline-block;
+	text-align:center;
+	font-family:"微软雅黑";
+}
+.labeltext3{
+    width:50px;
+	display:inline-block;
+	text-align:center;
+	font-family:"微软雅黑";
+}
+.tijiaobtn{
+    margin-left:100px;
+}
+
+
+.line1{
+    border-top:1px dashed #999999;
+}
+.historicalbooking{
+    margin-top:20px;
+	margin-left:0px;
+	margin-right:0px;
+}
+.historicalbooking p{
+    font-size:14px;
+    font-weight:600;
+	padding-left:25px;
+}
+.historicalbooking p span{
+    width:150px;
+	display:inline-block;
+	text-align:center;
+	background-color:#CCCCCC;
+	font-size:12px;
+	font-weight:normal;
+}
+.historicalbooking li{
+    list-style:none;
+    float:left;
+	text-align:center;
+	margin-left:3px;
+	margin-top:5px;
+}
+.width100px{width:100px;}
+.width120px{width:120px;}
+.width150px{width:150px;
+    display:inline-block;
+	text-align:right;
+	font-family:"微软雅黑";}
+.width170px{width:170px;}
+.width200px{width:200px;}
+.width220px{width:220px;}
+.bold{font-weight: bold;}
+.height30px{
+height:30px;}

@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+/* CSS Document */
+	/*-----------------------------------我的位置---------------------------------*/
+.banner_login {
+	height:100px;
+	width:980px;
+	margin:0 auto;
+	margin-top:100px;
+	padding-bottom:0px;
+	background:url(../../images/sub_images/loginlogo.png) no-repeat;
+	}

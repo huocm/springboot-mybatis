@@ -1,0 +1,103 @@
+
+<!--
+<script type="text/javascript" src="http://keleyi.com/keleyi/pmedia/jquery-1.9.1.min.js"></script>
+-->
+
+<script src="E:\projectSource7\JKTJApp\WebContent\js\jquery-1.6.min.js" type="text/javascript"></script>
+<script src="E:\projectSource7\JKTJApp\WebContent\js\loginselect.js" type="text/javascript" ></script>
+
+<style type="text/css">
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+body{font:12px/180% Arial, Helvetica, sans-serif,"宋体";}
+a{color:#333;text-decoration:none;}
+a:hover{color:#3366cc;text-decoration:underline;}
+/* demo */
+.demo{width:686px;margin:40px auto;position:relative;}
+.demo h2{font-size:16px;height:44px;color:#3366cc;margin-top:20px;}
+.demo dl dt{font-size:14px;color:#ff6600;margin-top:30px;font-weight:800;}
+.demo dl dt,.demo dl dd{line-height:22px;}
+/* tabbtn */
+.tabbtn{height:30px;background:url(http://keleyi.com/keleyi/phtml/tabswitch/images/tabbg.gif) repeat-x;border-left:solid 1px #ddd;border-right:solid 1px #ddd;}
+.tabbtn li{float:left;position:relative;margin:0 0 0 -1px;}
+.tabbtn li a{display:block;float:left;height:30px;line-height:30px;overflow:hidden;width:108px;text-align:center;font-size:12px;cursor:pointer;}
+.tabbtn li.current{border-left:solid 1px #d5d5d5;border-right:solid 1px #d5d5d5;border-top:solid 1px #c5c5c5;}
+.tabbtn li.current a{border-top:solid 2px #ff6600;height:27px;line-height:27px;background:#fff;color:#3366cc;font-weight:800;}
+/* tabcon */
+.tabcon{border-width:0 1px 1px 1px;border-color:#ddd;border-style:solid;position:relative;/*必要元素*/height:180px;overflow:hidden;}
+.tabcon .subbox{position:absolute;/*必要元素*/left:0;top:0;}
+.tabcon .sublist{padding:5px 10px;height:170px;}
+
+/* sublist */
+.sublist{padding:10px;}
+.sublist li{height:28px;line-height:28px;font-size:12px;}
+.sublist li span{margin:0 5px 0 0;font-family:"宋体";font-size:12px;font-weight:400;color:#ddd;}
+</style>
+
+<div class="demo">
+<h2>Jquery选项卡切换效果</h2>
+<ul class="tabbtn" id="normaltab">
+<li class="current"><a href="http://keleyi.com/menu/jquery/">jquery 特效</a></li>
+<li><a href="http://keleyi.com/menu/javascript/">javascript</a></li>
+<li><a href="http://keleyi.com/menu/mvc/">MVC</a></li>
+<li><a href="http://keleyi.com/menu/net/">.NET</a></li>
+</ul><!--tabbtn end-->
+<div class="tabcon" id="normalcon">
+<div class="sublist">
+<ul>
+<li><span>?</span><a href="http://keleyi.com/a/bjac/768f469b95b61487.htm" title="" target="_blank" >单行文字间歇向上滚动</a></li>
+<li><span>?</span><a href="http://keleyi.com/a/bjac/ed5eb8c2959c619e.htm" title="" target="_blank" >滚动页面时DIV到达顶部时固定在顶部</a></li>
+<li><span>?</span><a href="http://keleyi.com/a/bjac/a6d651710217f7a0.htm" title="" target="_blank" >使用jQuery UI修饰title属性的气泡悬浮框</a></li>
+<li><span>?</span><a href="http://keleyi.com/a/bjac/bf0eb8c02085b10d.htm" title="" target="_blank" >jquery清空textarea等输入框</a></li>
+<li><span>?</span><a href="http://keleyi.com/a/bjac/939631bb07adb4dc.htm" title="" target="_blank" >jquery关灯特效</a></li>
+<li><span>?</span><a href="http://keleyi.com/a/bjac/f4a6f78d74a251c5.htm" title="" target="_blank" >jquery根据滚动像素显示隐藏顶部导航条</a></li>
+<li><span>?</span><a href="http://keleyi.com/a/bjac/7e8897e5ec0849e9.htm" title="" target="_blank" >可改变大小DIV层</a></li>
+</ul>
+</div><!--tabcon end-->
+<div class="sublist">
+<ul>
+<li><span>?</span><a href="http://keleyi.com/a/bjac/e7f4d99c87604a8.htm" title="" target="_blank" >JS Trim()</a></li>
+<li><span>?</span><a href="http://keleyi.com/a/bjac/5d7f4ac2efa72d30.htm" title="" target="_blank" >菜单滚动至顶部后固定</a></li>
+<li><span>?</span><a href="http://keleyi.com/a/bjac/4f6d3873d0571805.htm" title="" target="_blank" >HTML5时钟</a></li>
+<li><span>?</span><a href="http://keleyi.com/a/bjac/ceb3c274df032ed5.htm" title="" target="_blank" >javascript onmousedown 事件</a></li>
+<li><span>?</span><a href="http://keleyi.com/a/bjac/a6e756c811719fff.htm" title="" target="_blank" >在图片上显示左右箭头的翻页代码</a></li>
+<li><span>?</span><a href="http://keleyi.com/dev/f1d8e1f2f1c95bc0.htm" title="" target="_blank" >window.open的页面刷新上层页面</a></li>
+</ul>
+</div><!--tabcon end-->
+<div class="sublist">
+<ul>
+<li><span>?</span><a href="http://keleyi.com/a/bjac/eb6f273eb3c4cd07.htm" title="在ASP.NET MVC 3 中自定义AuthorizeAttribute时需要注意的页面缓存问题" target="_blank" >在ASP.NET MVC 3 中自定义AuthorizeAttribute时需要注意的页面缓存问题</a></li>
+<li><span>?</span><a href="http://keleyi.com/a/bjac/4064796bf1f324c8.htm" title="" target="_blank" >柯乐义留言板：ASP.NET MVC4实例</a></li>
+<li><span>?</span><a href="http://keleyi.com/a/bjac/2916901353b081f1.htm" title="" target="_blank" >柯乐义留言板介绍</a></li>
+<li><span>?</span><a href="http://keleyi.com/a/bjac/1a9487bbb1cbfc50.htm" title="MVC：从客户端中检测到有潜在危险的 Request.Form 值 的解决方法" target="_blank" >MVC：从客户端中检测到有潜在危险的 Request.Form 值 的解决方法</a></li>
+<li><span>?</span><a href="http://keleyi.com/a/bjac/101639c1eb1e991b.htm" title="" target="_blank" >Html.ActionLink重载</a></li>
+<li><span>?</span><a href="http://keleyi.com/a/bjac/781ba7719ce323f.htm" title="" target="_blank" >ASP.NET MVC4中使用AJAX</a></li>
+</ul>
+</div><!--tabcon end-->
+<div class="sublist">
+<ul>
+<li><span>?</span><a href="http://keleyi.com/dev/beb40909418eb322.htm" title="" target="_blank" >WinForm 子窗体居中于父窗体代码</a></li>
+<li><span>?</span><a href="http://keleyi.com/dev/e52563d8ef0c81dd.htm" title="" target="_blank" >.NET常用正则表达式</a></li>
+<li><span>?</span><a href="http://keleyi.com/dev/b9c46b55ed4b6e0d.htm" title="" target="_blank" >WinForm窗体最大化代码</a></li>
+<li><span>?</span><a href="http://keleyi.com/dev/887a9ad6042c676.htm" title="" target="_blank" >saveFileDialog 保存文件的后缀</a></li>
+<li><span>?</span><a href="http://keleyi.com/dev/b6539b6c4146cc53.htm" title="" target="_blank" >ASP.NET验证码生成类</a></li>
+<li><span>?</span><a href="http://keleyi.com/dev/cb809a6fd56325b8.htm" title="" target="_blank" >tabcontrol 切换(聚焦)选项卡</a></li>
+<li><span>?</span><a href="http://keleyi.com/dev/908c6faf63374532.htm" title="" target="_blank" >.NET Winform 让picturebox出现滚动条</a></li>
+</ul>
+</div><!--tabcon end-->
+</div><!--tabcon end-->
+
+</div>
+
+<script type="text/javascript">
+$(document).ready(function ($) {
+
+//默认选项卡切换
+$("#normaltab").tabso({
+cntSelect: "#normalcon",
+tabEvent: "mouseover",
+tabStyle: "normal"
+});
+
+});
+</script>

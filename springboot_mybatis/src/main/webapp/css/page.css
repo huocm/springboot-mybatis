@@ -1,0 +1,45 @@
+?a{ color:#00a0e9; text-decoration:none;}
+a:hover{ color:#f00;}
+
+.bg-f0f0f0{ background-color:#f0f0f0;}
+.bg-f7f7f7{ background-color:#f7f7f7;}
+.bg-343434{ background-color:#00a0e9;} /* 浅蓝色  原为 00a0e9 343434   绿色 008000  */
+.bg-fff000{ background-color:#fff000;} /*  个人空间  */
+.bg-00a0e9{ background-color:#d9f2ff;} /*原为 00a0e9  */
+.bg-d9f2ff{ background-color:#343434;} /*原为  343434  背景-浅蓝色 d9f2ff */
+.bg-tjfk{ background-color:#008000;} 
+
+.border-b1-ccc{ border-bottom:1px #ccc solid;}
+.border-1-ccc{ border:1px #ccc solid;}
+
+.font-color-00a0e9{ color:#00a0e9;}
+.font-color-666{ color:#666;}
+.font-color-444{ color:#444;}
+.font-color-fff{ color:#fff;}
+
+.arrow-dataMutual{ height:40px; background-image:url(/css/arrow-dataMutual.png);}
+
+#topNav{}
+#header{ height:80px;}
+#nav{ height:50px;}
+#nav ul li a{ display:block; height:32px; padding-top:18px; padding-left:30px; padding-right:30px; color:#fff;}
+#nav ul li a:hover{-webkit-box-shadow: 3px 3px 5px #333; box-shadow: 3px -3px 5px #333; height:35px; padding-top:12px; background-color:#008000; margin-top:3px;} /* 此处008000原为  00a0e9*/
+
+.leftNav{ list-style:none;}
+.leftNav li a{ height:25px; line-height:25px; border-left:5px #ccc solid; padding-left:20px; color:#ccc;}
+.leftNav li a:hover{ border-left:5px #00a0e9 solid; color:#00a0e9;}
+.leftNav2{ list-style:none;}
+.leftNav2 li a{ height:25px; line-height:25px; padding-left:35px; color:#ccc; display:block;}
+.leftNav2 li a:hover{ color:#00a0e9;}
+
+.bgColorBlock-c0dae8W75H65{ display:block; width:60px; height:58px; padding-top:7px; padding-left:10px; padding-right:5px; background-image:url(/css/bgColorBlock-c0dae8W75H65.png); margin-right:10px; margin-bottom:10px;}
+
+.iconGroup-indexService1{ height:100px; width:100px; background-image:url(/css/iconGroup-indexService.png);}
+.iconGroup-indexService2{ height:100px; width:100px; background-image:url(/css/iconGroup-indexService.png); background-position:-100px 0px;}
+.iconGroup-indexService3{ height:100px; width:100px; background-image:url(/css/iconGroup-indexService.png); background-position:-200px 0px;}
+.iconGroup-indexService4{ height:100px; width:100px; background-image:url(/css/iconGroup-indexService.png); background-position:-300px 0px;}
+
+
+
+
+

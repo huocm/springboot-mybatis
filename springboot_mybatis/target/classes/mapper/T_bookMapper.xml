@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jcx.mapper.T_bookMapper">
+    <insert id="insert" parameterType="com.jcx.domain.T_book" >
+        INSERT INTO  T_BOOK(
+
+        TITLE,
+        CONTENT,
+        STATUS,
+        STARTTIME,
+        ANSWERTIME,
+        RESULT,
+        MEMO,
+        MEMO2,
+        CUSTOMERID,
+        USERID,
+        COMPANYID,
+        MEMBERID,
+        PRODUCTID,
+        COSTALL,
+        PRICEALL,
+        DISCOUNTRATO,
+        SHOULDPAY,
+        PAYSTATUS,
+        PRODUCTNAME,
+        COMPANYNAME,
+        CUSTOMERNAME,
+        MEMBERNAME,
+        BRANCHID,
+        BOOKTYPE,
+        companypid,
+        companypname,
+        MEMO3,
+        MEMO4,
+        MEMO5,
+        MEMO6,
+        MEMO7,
+        MEMO8,
+        MEMO9
+        )VALUES(
+
+
+        #title#,
+
+        #content#,
+
+        #status#,
+
+        #starttime#,
+
+        #answertime#,
+
+        #result#,
+
+        #memo#,
+
+        #memo2#,
+
+        #customerid#,
+
+        #userid#,
+
+        #companyid#,
+
+        #memberid#,
+
+        #productid#,
+
+        #costall#,
+
+        #priceall#,
+
+        #discountrato#,
+
+        #shouldpay#,
+
+        #paystatus#,
+
+        #productname#,
+
+        #companyname#,
+
+        #customername#,
+
+        #membername#,
+
+        #branchid#,
+
+        #booktype#,
+
+        #companypid#,
+
+        #companypname#,
+        #memo3#,
+        #memo4#,
+        #memo5#,
+        #memo6#,
+        #memo7#,
+        #memo8#,
+        #memo9#
+        )
+        <!-- mysql -->
+        <!--<selectKey resultClass="int" type="post" keyProperty="id" >
+            select LAST_INSERT_ID() as value
+        </selectKey>-->
+    </insert>
+    <update id="update" parameterType="com.jcx.domain.T_book">
+        UPDATE T_BOOK SET
+                             TITLE = #title#,
+                             CONTENT = #content#,
+                             STATUS = #status#,
+                             STARTTIME = #starttime#,
+                             ANSWERTIME = #answertime#,
+                             RESULT = #result#,
+                             MEMO = #memo#,
+                             MEMO2 = #memo2#,
+                             CUSTOMERID = #customerid#,
+                             USERID = #userid#,
+                             COMPANYID = #companyid#,
+                             MEMBERID = #memberid#,
+                             PRODUCTID = #productid#,
+                             COSTALL = #costall#,
+                             PRICEALL = #priceall#,
+                             DISCOUNTRATO = #discountrato#,
+                             SHOULDPAY = #shouldpay#,
+                             PAYSTATUS = #paystatus#,
+                             PRODUCTNAME = #productname#,
+                             COMPANYNAME = #companyname#,
+                             CUSTOMERNAME = #customername#,
+                             MEMBERNAME =  #membername#,
+                             BOOKTYPE = #booktype#,
+                             companypid =  #companypid#,
+                             companypname = #companypname#,
+                             MEMO3=#memo3#,
+                             MEMO4=#memo4#,
+                             MEMO5=#memo5#,
+                             MEMO6=#memo6#,
+                             MEMO7=#memo7#,
+                             MEMO8=#memo8#,
+                             MEMO9=#memo9#
+
+        WHERE ID =  #id#
+    </update>
+</mapper>

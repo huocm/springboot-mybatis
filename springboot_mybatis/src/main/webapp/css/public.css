@@ -1,0 +1,80 @@
+?/* CSS Document */
+*{ margin:0px; padding:0px;}
+body{ text-align:center; font-size:14px; font-family:microsoft yahei,"宋体"; color:#666666; background-color:#fff;}
+body,div,ul,ol,li,h1,h2,h3,h4,h5,h6,dl,dt,dd,p,form{ padding:0px; margin:0px;}
+input{ margin:0px;}
+.clear{ clear:both; font-size:0px; height:0px;}
+
+.h-5{ height:5px; font-size:0px;}
+.h-10{ height:10px; font-size:0px;}
+.h-15{ height:15px; font-size:0px;}
+.h-20{ height:20px;}
+.h-25{ height:25px;}
+.h-30{ height:30px;}
+.h-35{ height:35px;}
+.h-40{ height:40px;}
+.h-45{ height:45px;}
+.h-50{ height:50px;}
+.h-80{ height:80px;}
+/* 高样式统一定义 e */
+
+.font-12{ font-size:12px;}
+.font-16{ font-size:16px;}
+.font-18{ font-size:18px;}
+.font-20{ font-size:20px;}
+.font-weight{ font-weight:bold;}
+.font-lh20{ line-height:20px;}
+.font-lh25{ line-height:25px;}
+.font-lh30{ line-height:30px;}
+.font-lh35{ line-height:35px;}
+.font-lh40{ line-height:40px;}
+.font-lh50{ line-height:50px;}
+/* 文字大小及字体统一定义，14号为全局大小，故无须再定义 e */
+
+.align-l{ text-align:left;}
+.align-c{ text-align:center;}
+.align-r{ text-align:right;}
+/* 通用对齐 e */
+
+.float-r{ float:right;}
+.float-l{ float:left;}
+
+.w-1200{ width:1024px; margin:0 auto;}  //原为1200px
+.w-200{ width:200px;}
+.w-990{ width:990px;}
+.w-1000{ width:1000px;}
+/* 通用宽度 e */
+
+.relative{ position:relative;}
+.absolute{ position:absolute;}
+
+.p-t5{ padding-top:5px;}
+.p-t10{ padding-top:10px;}
+.p-t20{ padding-top:20px;}
+.p-r5{ padding-right:5px;}
+.p-r10{ padding-right:10px;}
+.p-r20{ padding-right:20px;}
+.p-b5{ padding-bottom:5px;}
+.p-b10{ padding-bottom:10px;}
+.p-b20{ padding-bottom:20px;}
+.p-l5{ padding-left:5px;}
+.p-l10{ padding-left:10px;}
+.p-l20{ padding-left:20px;}
+.p-10{ padding:10px;}
+.p-4{ padding:4px;}
+.p-9{ padding:9px;}
+
+.m-t5{ margin-top:5px;}
+.m-t10{ margin-top:10px;}
+.m-t20{ margin-top:20px;}
+.m-r5{ margin-right:5px;}
+.m-r10{ margin-right:10px;}
+.m-r20{ margin-right:20px;}
+.m-b5{ margin-bottom:5px;}
+.m-b10{ margin-bottom:10px;}
+.m-b20{ margin-bottom:20px;}
+.m-l5{ margin-left:5px;}
+.m-l10{ margin-left:10px;}
+.m-l20{ margin-left:20px;}
+
+.list-none{ list-style:none; list-style-type:none;}

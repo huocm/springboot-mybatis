@@ -1,0 +1,187 @@
+@charset "utf-8";
+/* CSS Document */
+.s_container{
+	width:1000px;
+	margin:0 auto;
+	margin-top:20px;
+	height:auto;
+	text-align:center;
+}
+h3{
+	color:#5da841;}
+.container_left{
+ float:left;
+ width:25%;
+}
+.container_right strong{
+	color:#5da841;
+	}
+.container_about_health{
+ float:left;
+ width:228px;
+ padding:8px;
+ border:1px solid #dcdcdc;
+  height:250px;
+  margin-left:3px;
+}
+.container_about_health img,.container_health_consultation img,.container_health_body img{
+	vertical-align:middle
+}
+.p_indent{
+	 text-indent:2em;
+	 }
+.container_health_consultation{
+ float:left;
+ width:228px;
+ padding:8px;
+ border:1px solid #dcdcdc;
+ margin-left:3px;
+  height:250px;
+}
+.container_news_dongtai{
+	 width:732px;
+	 height:230px;
+	 border:1px solid #dcdcdc;
+	 margin-top:5px;
+	 padding:5px;
+	 margin-left:5px;
+	}
+.container_health_body{
+	border: 1px solid #dcdcdc;
+    float: left;
+    padding: 8px;
+    width: 228px;
+	margin-left:3px;
+	height:250px;
+	}
+.container_yangshen_serverce{
+	 width:732px;
+	 margin-top:8px;
+	 border:1px solid #dcdcdc;
+	 margin-top:5px;
+	 padding:5px;
+	 height:250px;
+	 margin-left:5px;
+}
+.img_style{
+	margin-top:5px;
+	width:196px;
+	height:179px;
+	}
+.container_buttom{
+	width:100%;
+	height:240px;
+	padding-top:10px;
+	}
+.container_buttom_left{
+	float:left;
+	width:200px;
+	padding:4px;
+	border:	1px solid #dcdcdc;
+	height:240px;
+	margin-left:5px;
+	}
+.container_buttom_left p{
+	padding-top:8px;
+	}
+.container_buttom_middle{
+	float:left;
+	width:310px;
+	padding:4px;
+	border:	1px solid #dcdcdc;
+	margin-left:3px;
+	height:240px;
+	}
+.container_buttom_right{
+	float:left;
+	width:195px;
+	padding:4px;
+	border:	1px solid #dcdcdc;
+	margin-left:3px;
+	height:240px;
+	}
+.compay_img{
+  float: left;
+    height: 150px;
+    padding-top:3px;
+    width: 90px;
+	}
+.compay_img ul li{
+	 height: 50px;
+    line-height: 30px;
+    text-align: center;
+	}
+
+.hospitals {
+    margin-left: 10px;
+    margin-top: 15px;
+}
+.login_table{
+	 height: 250px;
+	 border:1px solid #dcdcdc;
+
+	 
+	}
+.call_table{
+	 height: 200px;
+	 border:1px solid #dcdcdc;
+	 margin-top:5px;
+	 text-align:center;
+	}
+.container_connect{
+	 height: 380px;
+	 border:1px solid #dcdcdc;
+	 text-align:center;
+	 margin-top:5px;
+	}
+.table1 span{
+	color:#64a746;
+	font-weight:bold;
+	width:60px;
+	margin-left:40px;
+	height:70px;
+	border:1px solid #dcdcdc;
+	
+	}
+.table2 span{
+	color:#64a746;
+	font-weight:bold;
+	width:60px;
+	margin-left:40px;
+	height:70px;
+	border:1px solid #dcdcdc;
+	
+	}
+.text {
+    border: 1px solid #d5d7d4;
+    color: #ccc;
+    display: inline-block;
+    font-size: 12px;
+    height: 16px;
+    line-height: 16px;
+    padding: 5px 2px;
+    vertical-align: top;
+    width: 220px;
+	margin-top:20px;
+	margin-left:10px;
+}
+.login_button{
+	width:135px;
+	height:38px;
+	margin-top:20px;
+	margin-left:5px;
+	}
+
+.a_style{
+	cursor:pointer;
+	color:#5ca740;
+	}
+* {margin:0px; padding:0px;}
+#box {width:3200px; height:400px; background:#fff; margin:0px auto; position: relative; overflow: hidden;z-index:5000;}
+#list {position:absolute; left:0; top:0;}
+#list li {list-style:none;width:1600px; height:400px; cursor: pointer;float:left;}
+#num {position: absolute; right:1900px; bottom:10px;}
+#num ul{ list-style:none;}
+#num li {list-style:none;width:16px; height:16px; float:left; margin-right:2px; color:#000; cursor: pointer; font-size: 12px; font-family:'Arial'; line-height:16px; text-align: center; border:1px solid #d0d1cf;}
+.active {background:#4ca332;}
+span {display: block; width:auto; text-align:center;  font-size: 14px; font-family:'Arial';}
